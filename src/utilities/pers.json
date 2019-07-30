@@ -1,0 +1,54 @@
+{
+
+"Candidatos":[
+
+    {
+        "nombre":" Uribe",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+        "Partido": "Democrático"
+
+    }
+,
+    {
+        "nombre":" Petro",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+        "Partido": "Democrático"
+
+    },
+    {
+        "nombre":" landa",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+
+        "Partido": "Central"
+
+    },
+    {
+        "nombre":" Monte",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+
+        "Partido": "Central"
+
+    },
+    {
+        "nombre":" Guti",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+
+        "Partido": "Derecha"
+
+    },
+    {
+        "nombre":"Aria Vega",
+        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
+
+        "Partido": "Derecha"
+
+    }
+]
+
+}
