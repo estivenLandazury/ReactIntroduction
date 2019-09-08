@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 /** Aqui importo un componente nav */
-import  Nav from './components/Nav';
+import Nav from './components/Nav';
 
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+
 
 function App() {
   return (
@@ -13,20 +15,25 @@ function App() {
       <header className="App-header">
 
         {/* La etiqueta nav hace referencia al componente  Navbar.js */}
-       <Navbar> </Navbar>
+        <Navbar> </Navbar>
+
+        <div className="container">
+
+          <h1 className="Titutlo-app"> Elecciones Colombia</h1>
+
+
+        </div>
 
         {/* La etiqueta nav hace referencia al componente  NAV.js */}
-        <Nav > </Nav> 
-        <img src={logo} className="App-logo" alt="logo" />
-       
+        <Nav > </Nav>
+
+
+
       </header>
 
 
-      <div className="container">
 
-        <h1> Hola panita</h1>
 
-      </div>
     </div>
   );
 }

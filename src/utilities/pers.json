@@ -1,54 +1,102 @@
 {
-
-"Candidatos":[
-
-    {
-        "nombre":" Uribe",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-        "Partido": "Democrático"
-
-    }
-,
-    {
-        "nombre":" Petro",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-        "Partido": "Democrático"
-
-    },
-    {
-        "nombre":" landa",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-
-        "Partido": "Central"
-
-    },
-    {
-        "nombre":" Monte",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-
-        "Partido": "Central"
-
-    },
-    {
-        "nombre":" Guti",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-
-        "Partido": "Derecha"
-
-    },
-    {
-        "nombre":"Aria Vega",
-        "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-        "imagen": "https://media.gettyimages.com/photos/young-handsome-man-working-at-sunny-office-on-desk-top-computer-while-picture-id912953082?b=1&k=6&m=912953082&s=612x612&w=0&h=Q-fJhE7LfDtS80Cwz1sBhdKFmdu9WjtRhnftW9OWlWM=",
-
-        "Partido": "Derecha"
-
-    }
-]
-
+    "Candidatos": [
+        {
+            "nombre": " Andres Alvarez",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/andres-carvajal.jpg",
+            "Partido": "Democrático",
+            "posicion": "1"
+        },
+        {
+            "nombre": " Daniel Marques",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/daniel-carvajal.jpg",
+            "Partido": "Democrático",
+            "posicion": "2"
+        },
+        {
+            "nombre": "Duvan Antivar",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/duvan-carvajal.jpg",
+            "Partido": "Central",
+            "posicion": "3"
+        },
+        {
+            "nombre": "Evelin Zuluaga",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/eve-carvajal.jpg",
+            "Partido": "Central",
+            "posicion": "4"
+        },
+        {
+            "nombre": " Cristian Guti",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/guti-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "5"
+        },
+        {
+            "nombre": "Valentina Hil",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/hil-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "6"
+        },
+        {
+            "nombre": "Francisco Vega",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/hugo-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "7"
+        },
+        {
+            "nombre": "Kevin",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/kevin-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "8"
+        },
+        {
+            "nombre": "Landa",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/landa-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "9"
+        },
+        {
+            "nombre": "Mariana Padilla",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/mariana-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "10"
+        },
+        {
+            "nombre": "James Montealegre",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/monte-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "11"
+        },
+        {
+            "nombre": "Hugo",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/pacho-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "12"
+        },
+        {
+            "nombre": "Verónica Calle",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/vero-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "13"
+        },
+        {
+            "nombre": "Ximena Rodriguez",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/xime-carvajal.jpg",
+            "Partido": "Derecha",
+            "posicion": "14"
+        }
+    ]
 }
