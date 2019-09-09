@@ -24,7 +24,7 @@ class Home extends Component {
                             <h1 className="h1-seo">BLK•Votar</h1>
                             <h3 className="d-sm-block">
                                 Bienvenidos Al Sistema de Votación.</h3>
-                            <NavLink to="/nav">
+                            <NavLink to="/tipo">
                                 <button className="btn btn-primary" type="submit">Ingresar A Botar</button>
                             </NavLink>
                         </div>

@@ -90,7 +90,7 @@ class nav extends Component {
                         <div className="card"  >
                             <img src={cand.bg} className="card-img-top" alt="..."></img>
                             <div className="card-body">
-                                <span class="dot">{cand.posicion}</span>
+                                <span className="dot">{cand.posicion}</span>
                                 <h5 className="card-title">{cand.nombre}</h5>
                                 <button type="button" className="btn btn-primary" onClick={this.toggleModal.bind(this, cand)}>Enviar Voto</button>
 

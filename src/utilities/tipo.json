@@ -3,7 +3,14 @@
         {
             "nombreElecion": "Representante Escuela Digital",
             "Imagen": "Images/descarga.png",
-            "Descripcion": ""
+            "Descripcion": "",
+            "url": "/nav"
+        },
+        {
+            "nombreElecion": "Representante a gerente de felicidad",
+            "Imagen": "Images/descarga.png",
+            "Descripcion": "",
+            "url": "/nav"
         }
     ]
 }

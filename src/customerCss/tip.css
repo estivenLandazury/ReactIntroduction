@@ -1,0 +1,42 @@
+.Conatiner {
+    text-align: center
+}
+
+img.log {
+    width: 11%;
+}
+
+h1.Title-header {
+    text-align: center;
+    font-size: 173%;
+    font-weight: bold;
+}
+
+.header {
+    height: 49px;
+    background: #d89028;
+}
+
+.cardi {
+    width: 14rem;
+    margin-top: 5%;
+    opacity: 0.7;
+    border-radius: 4%;
+}
+
+.cardi:hover {
+    opacity: inherit;
+}
+
+a {
+    color: #282929;
+    text-decoration: none;
+    /* background-color: transparent; */
+}
+
+@media only screen and (max-width: 360px) {
+    .header {
+        height: 73px;
+        background: #d89028;
+    }
+}
