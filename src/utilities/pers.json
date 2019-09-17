@@ -1,102 +1,109 @@
 {
     "Candidatos": [
         {
-            "nombre": " Andres Alvarez",
+            "nombre": " Francisco Vega",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/andres-carvajal.jpg",
+            "bg": "Images/francisco.png",
             "Partido": "Democrático",
             "posicion": "1"
         },
         {
-            "nombre": " Daniel Marques",
+            "nombre": "Estiven Landazury",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/daniel-carvajal.jpg",
-            "Partido": "Democrático",
+            "bg": "Images/landa.png",
+            "Partido": "Derecha",
             "posicion": "2"
         },
         {
-            "nombre": "Duvan Antivar",
+            "nombre": "Andres Alvarez",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/duvan-carvajal.jpg",
-            "Partido": "Central",
+            "bg": "Images/andres.png",
+            "Partido": "Derecha",
             "posicion": "3"
         },
         {
             "nombre": "Evelin Zuluaga",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/eve-carvajal.jpg",
+            "bg": "Images/eve.png",
             "Partido": "Central",
             "posicion": "4"
         },
         {
-            "nombre": " Cristian Guti",
+            "nombre": "Hugo Santiago",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/guti-carvajal.jpg",
+            "bg": "Images/santiago.png",
             "Partido": "Derecha",
             "posicion": "5"
         },
         {
-            "nombre": "Valentina Hil",
+            "nombre": "Cristian Florez",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/hil-carvajal.jpg",
+            "bg": "Images/cristian.png",
             "Partido": "Derecha",
             "posicion": "6"
         },
         {
-            "nombre": "Francisco Vega",
+            "nombre": " Daniel Marques",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/hugo-carvajal.jpg",
-            "Partido": "Derecha",
+            "bg": "Images/dani.png",
+            "Partido": "Democrático",
             "posicion": "7"
         },
         {
             "nombre": "Kevin",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/kevin-carvajal.jpg",
+            "bg": "Images/kevs.png",
             "Partido": "Derecha",
             "posicion": "8"
         },
         {
-            "nombre": "Landa",
+            "nombre": "Mariana Padilla",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/landa-carvajal.jpg",
+            "bg": "Images/aria.png",
             "Partido": "Derecha",
             "posicion": "9"
         },
         {
-            "nombre": "Mariana Padilla",
+            "nombre": "Duvan Antivar",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/mariana-carvajal.jpg",
-            "Partido": "Derecha",
+            "bg": "Images/duvan.png",
+            "Partido": "Central",
             "posicion": "10"
         },
         {
-            "nombre": "James Montealegre",
+            "nombre": " Cristian Guti",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/monte-carvajal.jpg",
+            "bg": "Images/guti.png",
             "Partido": "Derecha",
             "posicion": "11"
         },
         {
-            "nombre": "Hugo",
+            "nombre": "Valentina Hil",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/pacho-carvajal.jpg",
+            "bg": "Images/gil.png",
             "Partido": "Derecha",
             "posicion": "12"
         },
         {
-            "nombre": "Verónica Calle",
+            "nombre": "Camilo Charria",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/vero-carvajal.jpg",
+            "bg": "Images/cami.png",
             "Partido": "Derecha",
             "posicion": "13"
         },
         {
-            "nombre": "Ximena Rodriguez",
+            "nombre": "Verónica Calle",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
-            "bg": "Images/xime-carvajal.jpg",
+            "bg": "Images/vero.png",
             "Partido": "Derecha",
             "posicion": "14"
+        },
+        {
+            "nombre": "James Montealegre",
+            "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
+            "bg": "Images/monte.png",
+            "Partido": "Derecha",
+            "posicion": "15"
         }
     ]
 }
