@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { UncontrolledCarousel, Modal, ModalBody, ModalFooter, ModalHeader, Alert } from "reactstrap";
 import logo from '../images/LOGOS-04.png'
 import { Button } from 'react-bootstrap';
+import ScanQRS from './ScanQR'
+
+import ScanQR from './ScanQR'
 
 
 import Home from './Home';
@@ -15,11 +18,11 @@ import Home from './Home';
 
 class nav extends Component {
 
-    constructor() {
+    constructor(props) {
         {/* Este método es el primero que se ejecuta antes del render*/ }
 
         {/* Con el método super heredo todas la funcionalidades de react*/ }
-        super();
+        super(props);
 
         {/* State me indica el estado en el que están los datos en la aplicación react
     especificamente en este componente*/}
@@ -29,7 +32,10 @@ class nav extends Component {
             element: "",
             visible: false
 
+
         }
+
+        console.log("hola" + this.props)
 
     }
 
@@ -38,6 +44,13 @@ class nav extends Component {
 
         let val = value.nombre;
         console.log("este es" + val)
+
+    }
+
+    componentDidMount() {
+        this._isMounted = true;
+
+
 
     }
 
@@ -79,6 +92,7 @@ class nav extends Component {
 
     render() {
         const element = this.state.element;
+
         const candidat = this.state.Candidatos.map((cand, index) => {
 
             return (
