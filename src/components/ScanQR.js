@@ -1,12 +1,17 @@
-import React, { Component, Alert } from "react";
+import React, { Component } from "react";
 import QrReader from "react-qr-reader";
 import '../customerCss/Scan.css';
 import { Redirect, Route, Router, BrowserRouter, NavLink } from 'react-router-dom'
 import withUnmounted from '@ishawnwang/withunmounted';
 import Nav from './Nav';
 import { createBrowserHistory } from "history";
+import 'react-notifications/lib/notifications.css'
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+
 
 import PropTypes from 'prop-types'
+import { Alert } from "reactstrap";
+
 
 
 
@@ -26,12 +31,7 @@ class Scan extends Component {
         };
 
 
-
-
         this.handleScan = this.handleScan.bind(this);
-
-
-
     }
 
 
@@ -69,9 +69,7 @@ class Scan extends Component {
 
     handleScan(data) {
 
-
         if (data) {
-
             console.log(data)
 
             fetch("http://192.168.96.37:5000/verificar", {
@@ -84,8 +82,8 @@ class Scan extends Component {
                 .then(response => response.json())
                 .then((responseJson) => {
 
-                    console.log(responseJson)
-                    if (responseJson == "True") {
+                    console.log(responseJson.estado)
+                    if (responseJson.estado == "True") {
 
                         this.setState({
                             estado: "True",
@@ -95,13 +93,14 @@ class Scan extends Component {
 
                     } else {
 
-                        this.setState({
-                            result: "QR No Es valido"
-                        })
+                        NotificationManager.error('Error message', 'El QR ya no es valido para votar', '3000');
 
                     }
                 })
-                .catch(error => console.log(error + "que paso manito"))
+                .catch(error =>
+                    NotificationManager.error('Error message', 'Ha ocorrido un error en el sistema', '3000'),
+
+                )
 
         }
 
@@ -126,11 +125,13 @@ class Scan extends Component {
 
         return (
 
+            < div className="Scaner">
 
+                <NotificationContainer></NotificationContainer>
 
-            < div className="Scaner" >
-
-
+                <Alert className="Alert_danger" id="dangerScan" color="danger" isOpen={this.state.visible}>
+                    Su token de sesión no está hablitado para votar
+                </Alert>
 
                 <p className="Title_indi"> Scanea El código QR Para habilitar el Sistema</p>
                 <QrReader
@@ -139,20 +140,23 @@ class Scan extends Component {
                     onScan={this.handleScan}
                 />
 
-                <p>{this.state.result}</p>
+                {
+                    this.state.estado == "True" ? (
 
+                        <Route history={customHistory} exact path="/nav" render={(props) => (<Nav {...props.match.params} dnii={this.state.dni} />)}>
 
+                            <Redirect to={{
+                                pathname: '/nav'
 
+                            }}> </Redirect>
 
+                        </Route>
 
-
-
-
-
+                    ) : ("")
+                }
             </div >
         );
     }
-
 }
 
 export default withUnmounted(Scan);

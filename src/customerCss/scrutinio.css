@@ -1,0 +1,71 @@
+img.home-logo_es {
+    width: 41%;
+    margin-left: 29%;
+}
+
+h1.Title_scrun {
+    color: #d17838;
+    text-align: center;
+    font-weight: bold;
+}
+
+div#bod {
+    width: 77rem;
+}
+
+h1.Nombre_candidat {
+    color: black;
+}
+
+h4.votos {
+    font-size: 98%;
+}
+
+button#actualizar {
+    /* float: right; */
+    /* margin-right: 6%; */
+    z-index: 1;
+    position: fixed;
+    /* position: fixed; */
+}
+
+.imageCan {
+    width: 19%;
+}
+
+img.card-img-scrum {
+    width: 11%;
+}
+
+.info-card {
+    display: flex;
+}
+
+img.card-img-scrum {
+    width: 83%;
+}
+
+.conten-cand {
+    width: 72%;
+    margin-top: 8%;
+}
+
+ul.list {
+    list-style: none;
+}
+
+div#bod {
+    opacity: inherit;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    z-index: 1;
+    position: fixed;
+    float: right;
+    /* text-align: right; */
+    width: 112%;
+    font-size: 130%;
+}

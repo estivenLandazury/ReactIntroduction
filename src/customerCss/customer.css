@@ -86,3 +86,8 @@ h5.card-title_body {
     border-width: 2px
     /* background-color: red; */
 }
+
+p.text {
+    font-weight: bold;
+    font-size: 118%;
+}

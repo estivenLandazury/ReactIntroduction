@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+
 import { Candidatos } from '../utilities/pers.json';
 import '../customerCss/customer.css';
 import PropTypes from 'prop-types'
@@ -12,6 +14,8 @@ import ScanQR from './ScanQR'
 
 
 import Home from './Home';
+import 'react-notifications/lib/notifications.css'
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 
 
@@ -30,13 +34,14 @@ class nav extends Component {
             Candidatos,
             modalIsopen: false,
             element: "",
-            visible: false
+            visible: false,
+            visible1: false,
+
 
 
         }
 
         console.log("hola" + this.props)
-
     }
 
     /** Meteodo que obtiene el candidato seleccionado */
@@ -49,8 +54,70 @@ class nav extends Component {
 
     componentDidMount() {
         this._isMounted = true;
+    }
 
 
+    votar() {
+        let data = { 'indice': this.state.element.posicion, 'dni': "123596" }
+        console.log("posición " + this.state.element.posicion)
+
+
+
+        let options = {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+
+
+        fetch("http://192.168.96.37:5000/votar", options)
+            .then(response => response.json())
+            .then((responseJson) => {
+
+                this.setState({
+                    redirect: true
+                }
+                )
+                console.log("este es response " + responseJson.estado)
+
+                if (responseJson.estado == "Ha ocurrido un error") {
+                    this.serverAlert();
+
+                    console.log("error landita")
+                }
+
+                if (responseJson.estado == "Voto registrado con exito") {
+
+                    /*this.props.history.push('/home')*/
+                    this.toggleAlert();
+                    console.log("vot registrado papa " + this.state.redirect)
+
+                }
+
+            }).catch(error => this.serverAlert()
+            )
+
+    }
+
+
+
+    serverAlert() {
+        this.setState({
+            visible1: !this.state.visible1
+        }, () => {
+            window.setTimeout(() => {
+                this.setState({ visible1: !this.state.visible1 })
+            }, 5000)
+        });
+
+        this.setState({
+            modalIsopen: !this.state.modalIsopen,
+
+
+        });
 
     }
 
@@ -69,7 +136,12 @@ class nav extends Component {
 
         });
 
+
+
     }
+
+
+
 
     toggleModal = value => {
         this.setState({
@@ -84,6 +156,7 @@ class nav extends Component {
         });
 
         const element = value;
+
         console.log(element.nombre)
     }
 
@@ -101,7 +174,7 @@ class nav extends Component {
                 <div className="rows show-grid" key={index} >
                     <div className="col-xs-2 mb-5 ml-2">
 
-                        <div className="card"  >
+                        <div className="card" onClick={this.toggleModal.bind(this, cand)} >
                             <img src={cand.bg} className="card-img-top" alt="..."></img>
                             <div className="card-body">
                                 <span className="dot">{cand.posicion}</span>
@@ -129,13 +202,17 @@ class nav extends Component {
 
             <div className="Contenido">
 
+                <Alert className="Alert_danger" color="danger" isOpen={this.state.visible1}>
+                    Ha ocurrido un error en el sistema verifique su conexión en la red
+                </Alert>
+
                 <Alert className="Alert_succes" color="success" isOpen={this.state.visible}>
                     Ha realizado su voto por  {element.nombre}  correctamente
                 </Alert>
                 <div className="header-vot">
                     <img src={logo} className="Image_header" alt="Logo" />
                     <h1 className="title_text">Representante de Área</h1>
-                    <p className="text"> Hola Por favor elige un candidato</p>
+                    <p className="text">  Por favor elige un candidato</p>
 
                 </div>
 
@@ -157,7 +234,7 @@ class nav extends Component {
 
                     <ModalFooter>
 
-                        <button type="button" className="btn btn-primary" onClick={this.toggleAlert.bind(this)}>Enviar voto</button>
+                        <button type="button" className="btn btn-primary" onClick={this.votar.bind(this)}>Enviar voto</button>
                         <button type="button" className="btn btn-danger" onClick={this.toggleModal.bind(this)}>Cancelar </button>
                     </ModalFooter>
                 </Modal>

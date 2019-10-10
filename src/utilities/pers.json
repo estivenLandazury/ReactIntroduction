@@ -5,105 +5,105 @@
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/francisco.png",
             "Partido": "Democrático",
-            "posicion": "1"
+            "posicion": "0"
         },
         {
             "nombre": "Estiven Landazury",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/landa.png",
             "Partido": "Derecha",
-            "posicion": "2"
+            "posicion": "1"
         },
         {
             "nombre": "Andres Alvarez",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/andres.png",
             "Partido": "Derecha",
-            "posicion": "3"
+            "posicion": "2"
         },
         {
             "nombre": "Evelin Zuluaga",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/eve.png",
             "Partido": "Central",
-            "posicion": "4"
+            "posicion": "3"
         },
         {
             "nombre": "Hugo Santiago",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/santiago.png",
             "Partido": "Derecha",
-            "posicion": "5"
+            "posicion": "4"
         },
         {
             "nombre": "Cristian Florez",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/cristian.png",
             "Partido": "Derecha",
-            "posicion": "6"
+            "posicion": "5"
         },
         {
             "nombre": " Daniel Marques",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/dani.png",
             "Partido": "Democrático",
-            "posicion": "7"
+            "posicion": "6"
         },
         {
             "nombre": "Kevin",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/kevs.png",
             "Partido": "Derecha",
-            "posicion": "8"
+            "posicion": "7"
         },
         {
             "nombre": "Mariana Padilla",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/aria.png",
             "Partido": "Derecha",
-            "posicion": "9"
+            "posicion": "8"
         },
         {
             "nombre": "Duvan Antivar",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/duvan.png",
             "Partido": "Central",
-            "posicion": "10"
+            "posicion": "9"
         },
         {
             "nombre": " Cristian Guti",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/guti.png",
             "Partido": "Derecha",
-            "posicion": "11"
+            "posicion": "10"
         },
         {
             "nombre": "Valentina Gil",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/gil.png",
             "Partido": "Derecha",
-            "posicion": "12"
+            "posicion": "11"
         },
         {
             "nombre": "Camilo Charria",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/cami.png",
             "Partido": "Derecha",
-            "posicion": "13"
+            "posicion": "12"
         },
         {
             "nombre": "Verónica Calle",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/vero.png",
             "Partido": "Derecha",
-            "posicion": "14"
+            "posicion": "13"
         },
         {
             "nombre": "James Montealegre",
             "Propuesta": "Melo Caramelo no quiero hacer prescriptiva",
             "bg": "Images/monte.png",
             "Partido": "Derecha",
-            "posicion": "15"
+            "posicion": "14"
         }
     ]
 }

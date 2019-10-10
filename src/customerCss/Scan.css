@@ -10,3 +10,15 @@ p.Title_indi {
     font-size: 159%;
     text-align: center;
 }
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    z-index: 1;
+    position: fixed;
+    float: right;
+    /* text-align: right; */
+    width: 112%;
+    font-size: 130%;
+}

@@ -8,6 +8,8 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Tipo from './components/Tipo';
 import ScanQR from './components/ScanQR';
+import scrutinio from './components/scrutinio';
+
 import * as serviceWorker from './serviceWorker';
 
 
@@ -19,6 +21,7 @@ ReactDOM.render(
             <Route exact path="/home" component={Home} />
             <Route exact path="/nav" component={Nav} />
             <Route exact path="/tipo" component={Tipo} />
+            <Route exact path="/scrutinio" component={scrutinio} />
             <Route exact path="/scan" component={ScanQR}></Route>
 
         </Switch>
