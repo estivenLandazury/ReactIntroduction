@@ -28,7 +28,9 @@ class scrutinio extends Component {
             candidatos: [],
             Candidatos,
             visible: false,
-            visible1: false
+            visible1: false,
+            URL: "http://192.168.96.37:5000/"
+
 
         }
     }
@@ -43,7 +45,7 @@ class scrutinio extends Component {
 
         }
 
-        fetch("http://192.168.96.37:5000/consolidado", options)
+        fetch(this.state.URL + "consolidado", options)
             .then(response => response.json())
             .then((responseJson) => {
 
@@ -126,7 +128,7 @@ class scrutinio extends Component {
 
         }
 
-        fetch("http://192.168.96.37:5000/consolidado", options)
+        fetch(this.state.URL + "consolidado", options)
             .then(response => response.json())
             .then((responseJson) => {
 

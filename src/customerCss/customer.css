@@ -91,3 +91,7 @@ p.text {
     font-weight: bold;
     font-size: 118%;
 }
+
+.HpQrcode {
+    display: none;
+}

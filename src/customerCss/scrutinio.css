@@ -69,3 +69,7 @@ div#bod {
     width: 112%;
     font-size: 130%;
 }
+
+.modal-dialog.ModalQR {
+    margin-top: 6%;
+}

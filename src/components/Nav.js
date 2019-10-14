@@ -5,17 +5,17 @@ import { Candidatos } from '../utilities/pers.json';
 import '../customerCss/customer.css';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-import { UncontrolledCarousel, Modal, ModalBody, ModalFooter, ModalHeader, Alert } from "reactstrap";
+import { Alert } from "reactstrap";
+import { Modal } from "reactstrap";
+import { ModalBody } from "reactstrap";
+import { ModalFooter } from "reactstrap";
+import { ModalHeader } from "reactstrap";
+
 import logo from '../images/LOGOS-04.png'
-import { Button } from 'react-bootstrap';
-import ScanQRS from './ScanQR'
-
-import ScanQR from './ScanQR'
-
-
+import QRCode from 'react.qrcode.generator'
 import Home from './Home';
 import 'react-notifications/lib/notifications.css'
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+
 
 
 
@@ -23,25 +23,23 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 class nav extends Component {
 
     constructor(props) {
-        {/* Este método es el primero que se ejecuta antes del render*/ }
 
-        {/* Con el método super heredo todas la funcionalidades de react*/ }
         super(props);
 
-        {/* State me indica el estado en el que están los datos en la aplicación react
-    especificamente en este componente*/}
+        document.createElement("a");
+
+
         this.state = {
             Candidatos,
             modalIsopen: false,
             element: "",
             visible: false,
             visible1: false,
-
-
+            cambiar: false,
+            clavesimetrica: "h",
+            URL: "http://192.168.96.37:5000/"
 
         }
-
-        console.log("hola" + this.props)
     }
 
     /** Meteodo que obtiene el candidato seleccionado */
@@ -55,6 +53,8 @@ class nav extends Component {
     componentDidMount() {
         this._isMounted = true;
     }
+
+
 
 
     votar() {
@@ -73,7 +73,7 @@ class nav extends Component {
         }
 
 
-        fetch("http://192.168.96.37:5000/votar", options)
+        fetch(this.state.URL + "votar", options)
             .then(response => response.json())
             .then((responseJson) => {
 
@@ -81,6 +81,7 @@ class nav extends Component {
                     redirect: true
                 }
                 )
+
                 console.log("este es response " + responseJson.estado)
 
                 if (responseJson.estado == "Ha ocurrido un error") {
@@ -91,14 +92,70 @@ class nav extends Component {
 
                 if (responseJson.estado == "Voto registrado con exito") {
 
-                    /*this.props.history.push('/home')*/
-                    this.toggleAlert();
-                    console.log("vot registrado papa " + this.state.redirect)
+                    this.setState({
+                        clavesimetrica: responseJson.qr_credenciales
+                    })
 
+                    if (this.state.clavesimetrica !== "h") {
+                        this.toggleAlert();
+                        console.log("Vamos a imprimir")
+                        this.download()
+                    }
+
+                    console.log("vot registrado papa " + responseJson.qr_credenciales)
                 }
-
             }).catch(error => this.serverAlert()
             )
+
+    }
+
+    myFunction() {
+        this.props.history.push('/home')
+    }
+
+
+
+
+
+    Qrgenerator(value) {
+
+
+        if (value !== "h") {
+            console.log("si  cambió" + value)
+            return <div className="HpQrcode" id="" >
+
+                <QRCode
+                    value={"" + value}
+                    size={200}
+                    level={'H'}
+                />
+            </div >;
+
+
+        } else if (value == "h") {
+            console.log("no cambio " + value)
+
+            return <div className="HpQrcode" id="" >
+
+                <h1> Hola bb</h1>
+            </div >;
+        }
+
+
+
+    }
+
+    download() {
+        const canvas = document.querySelector('.HpQrcode > canvas');
+        const pngUrl = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        let downloadLink = document.createElement("a");
+        downloadLink.href = pngUrl;
+        downloadLink.download = this.state.clavesimetrica + ".png";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        console.log("Image", this.pngUrl)
+
 
     }
 
@@ -113,11 +170,7 @@ class nav extends Component {
             }, 5000)
         });
 
-        this.setState({
-            modalIsopen: !this.state.modalIsopen,
 
-
-        });
 
     }
 
@@ -132,8 +185,6 @@ class nav extends Component {
 
         this.setState({
             modalIsopen: !this.state.modalIsopen,
-
-
         });
 
 
@@ -146,8 +197,6 @@ class nav extends Component {
     toggleModal = value => {
         this.setState({
             modalIsopen: !this.state.modalIsopen,
-
-
         });
 
         this.setState({
@@ -162,10 +211,10 @@ class nav extends Component {
 
 
 
-
     render() {
         const element = this.state.element;
-
+        let credenciales = this.state.clavesimetrica;
+        console.log("credencialesPrueba " + credenciales)
         const candidat = this.state.Candidatos.map((cand, index) => {
 
             return (
@@ -190,8 +239,6 @@ class nav extends Component {
 
                 </div>
 
-
-
             )
         })
 
@@ -199,6 +246,7 @@ class nav extends Component {
         {/**Este metodo return es que muestra todo el contenido que se desea de este componente*/ }
 
         return (
+
 
             <div className="Contenido">
 
@@ -208,6 +256,7 @@ class nav extends Component {
 
                 <Alert className="Alert_succes" color="success" isOpen={this.state.visible}>
                     Ha realizado su voto por  {element.nombre}  correctamente
+
                 </Alert>
                 <div className="header-vot">
                     <img src={logo} className="Image_header" alt="Logo" />
@@ -230,6 +279,9 @@ class nav extends Component {
 
                         </div>
 
+
+
+
                     </ModalBody>
 
                     <ModalFooter>
@@ -239,13 +291,12 @@ class nav extends Component {
                     </ModalFooter>
                 </Modal>
 
-
-
-
+                {this.Qrgenerator(this.state.clavesimetrica)}
 
 
                 {candidat}
-            </div>
+
+            </div >
 
         );
     }

@@ -25,7 +25,9 @@ class Scan extends Component {
             result: "No result",
             dni: "",
             estado: false,
-            visible: false
+            visible: false,
+            URL: "http://192.168.96.37:5000/"
+
 
 
         };
@@ -72,7 +74,7 @@ class Scan extends Component {
         if (data) {
             console.log(data)
 
-            fetch("http://192.168.96.37:5000/verificar", {
+            fetch(this.state.URL + "verificar", {
                 method: 'PUT',
                 body: JSON.stringify({ token: data }),
                 headers: {
