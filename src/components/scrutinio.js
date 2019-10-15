@@ -36,6 +36,10 @@ class scrutinio extends Component {
     }
 
     cargarCandidatos() {
+
+        window.location.reload();
+
+        /*
         let options = {
             method: 'GET',
             headers: {
@@ -62,7 +66,7 @@ class scrutinio extends Component {
 
             }).catch(error => this.serverAlert())
 
-
+*/
     }
 
 
