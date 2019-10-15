@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 
 import { Candidatos } from '../utilities/pers.json';
 import '../customerCss/customer.css';
+
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import { Alert } from "reactstrap";
@@ -15,6 +16,8 @@ import logo from '../images/LOGOS-04.png'
 import QRCode from 'react.qrcode.generator'
 import Home from './Home';
 import 'react-notifications/lib/notifications.css'
+import { reject } from 'q';
+import { resolve } from 'path';
 
 
 
@@ -99,7 +102,31 @@ class nav extends Component {
                     if (this.state.clavesimetrica !== "h") {
                         this.toggleAlert();
                         console.log("Vamos a imprimir")
-                        this.download()
+                        var promise = Promise.resolve(this.download())
+                        const that = this
+
+                        promise.then(function () {
+                            if (that.state.clavesimetrica !== "h") {
+                                console.log("Hola pachito " + that.state.clavesimetrica)
+                                setTimeout(() => {
+                                    window.location.href = '/home'
+                                }, 2000)
+
+
+                            }
+
+                        })
+
+
+                        /** 
+                        this.download(this.state.clavesimetrica).then(function () {
+                            console.log("se metió pacho")
+                            console.log(that.props)
+
+                        }
+
+
+                        )*/
                     }
 
                     console.log("vot registrado papa " + responseJson.qr_credenciales)
@@ -109,8 +136,8 @@ class nav extends Component {
 
     }
 
-    myFunction() {
-        this.props.history.push('/home')
+    myFunction(value) {
+        value.props.history.push('/home')
     }
 
 
@@ -156,8 +183,40 @@ class nav extends Component {
         document.body.removeChild(downloadLink);
         console.log("Image", this.pngUrl)
 
-
     }
+
+
+    /*
+     download(value) {
+         const that = this;
+     
+         return new Promise((resolve, reject) => {
+     
+             if (value != "h") {
+                 const canvas = document.querySelector('.HpQrcode > canvas');
+                 const pngUrl = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                 let downloadLink = document.createElement("a");
+                 downloadLink.href = pngUrl;
+                 downloadLink.download = value + ".png";
+                 document.body.appendChild(downloadLink);
+                 downloadLink.click();
+                 document.body.removeChild(downloadLink);
+                 resolve(that.setState({
+                     cambiar: true
+     
+                 }))
+             } else {
+                 reject("Error")
+     
+             }
+     
+         })
+     
+     
+     
+     }
+     
+     */
 
 
 
@@ -295,6 +354,8 @@ class nav extends Component {
 
 
                 {candidat}
+
+
 
             </div >
 
