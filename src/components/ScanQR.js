@@ -5,8 +5,8 @@ import { Redirect, Route, Router, BrowserRouter, NavLink } from 'react-router-do
 import withUnmounted from '@ishawnwang/withunmounted';
 import Nav from './Nav';
 import { createBrowserHistory } from "history";
-import 'react-notifications/lib/notifications.css'
 import { NotificationContainer, NotificationManager } from 'react-notifications';
+
 
 
 import PropTypes from 'prop-types'
@@ -27,6 +27,8 @@ class Scan extends Component {
             estado: false,
             visible: false,
             URL: "http://192.168.96.37:5000/"
+            /* URL: "http://e5facf9c.ngrok.io/"*/
+
 
 
 

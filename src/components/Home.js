@@ -33,7 +33,6 @@ class Home extends Component {
                 <div className="squares square6" />
                 <div className="squares square7" />
 
-
             </div>
 
         );
