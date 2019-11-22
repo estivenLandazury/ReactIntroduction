@@ -10,7 +10,8 @@ h1.Title_scrun {
 }
 
 div#bod {
-    width: 77rem;
+    width: auto;
+    margin-right: 5%;
 }
 
 h1.Nombre_candidat {
