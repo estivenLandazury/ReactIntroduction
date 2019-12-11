@@ -41,7 +41,7 @@ class nav extends Component {
             cambiar: false,
             clavesimetrica: "h",
             /*URL: "http://192.168.96.37:5000/"*/
-            URL: "https://905ee0ab.ngrok.io/"
+            URL: "https://2532549a.ngrok.io/"
 
 
         }
