@@ -30,7 +30,7 @@ class scrutinio extends Component {
             visible: false,
             visible1: false,
             /*URL: "http://192.168.96.37:5000/"*/
-            URL: "https://2532549a.ngrok.io/"
+            URL: "https://d813afb8.ngrok.io/"
 
 
 
