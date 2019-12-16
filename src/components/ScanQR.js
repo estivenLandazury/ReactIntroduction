@@ -27,7 +27,7 @@ class Scan extends Component {
             estado: false,
             visible: false,
             /* URL: "http://192.168.96.37:5000/"*/
-            URL: "https://d813afb8.ngrok.io/"
+            URL: "https://7396f703.ngrok.io/"
 
 
 

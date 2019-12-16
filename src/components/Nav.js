@@ -41,7 +41,7 @@ class nav extends Component {
             cambiar: false,
             clavesimetrica: "h",
             /*URL: "http://192.168.96.37:5000/"*/
-            URL: "https://d813afb8.ngrok.io/"
+            URL: "https://7396f703.ngrok.io/"
 
 
         }
@@ -60,7 +60,9 @@ class nav extends Component {
     }
 
 
-
+    /**
+    Método que consume el servicio para que se pueda ejecutar la votación correcatmente 
+     */
 
     votar() {
         let data = { 'indice': this.state.element.posicion, 'dni': "123596" }
