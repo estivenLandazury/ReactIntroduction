@@ -147,7 +147,7 @@ class nav extends Component {
 
 
 
-
+    /** Este metodo se encarga de generar el codigo QR que se ibtiene después de ejecutar la función de votar */
     Qrgenerator(value) {
 
 
@@ -175,6 +175,10 @@ class nav extends Component {
 
 
     }
+
+    /** Este metodo se encarga de descargar automaticamente el QR que se generó tras la votación
+     * 
+     */
 
     download() {
         const canvas = document.querySelector('.HpQrcode > canvas');

@@ -71,7 +71,7 @@ class Scan extends Component {
 
 
 
-
+/** Este método permite scanear  un código QR  que se enfoque hacia la camara WEB */
     handleScan(data) {
 
         if (data) {

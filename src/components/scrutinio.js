@@ -41,36 +41,7 @@ class scrutinio extends Component {
 
         window.location.reload();
 
-        /*
-        let options = {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-
-        }
-
-        fetch(this.state.URL + "consolidado", options)
-            .then(response => response.json())
-            .then((responseJson) => {
-
-                this.setState({
-
-                    candidatos: this.sortby(responseJson.candidatos, 'votos')
-
-                })
-
-                this.toggleAlert();
-
-                console.log("este es response " + this.state.candidatos)
-
-
-            }).catch(error => this.serverAlert())
-
-*/
     }
-
 
 
     serverAlert() {
@@ -107,6 +78,9 @@ class scrutinio extends Component {
 
     }
 
+
+    /** Metodo que se encarga de organizar  de mayor a menor la lista de candidatos segun la cantidad de votos */
+
     sortby(array, key) {
         return array.sort(function (a, b) {
             var x = a[key]; var y = b[key];
@@ -133,6 +107,9 @@ class scrutinio extends Component {
             },
 
         }
+
+
+        /*** Este fetch permite obtener la lista de consolidado de los candidatos */
 
         fetch(this.state.URL + "consolidado", options)
             .then(response => response.json())
